@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ControleDeCinema.Dominio.Filme">
-    <Position X="1.5" Y="3" Width="1.5" />
+  <Class Name="ControleDeCinema.Dominio.ModuloSala.Sala">
+    <Position X="1.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAABA=</HashCode>
-      <FileName>Filmes.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAABAAAAAAAQAAAAAAAAAhAAA=</HashCode>
+      <FileName>ModuloSala\Sala.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ControleDeCinema.Dominio.Sala">
-    <Position X="1.5" Y="0.75" Width="1.5" />
+  <Class Name="ControleDeCinema.Dominio.ModuloIngresso.Ingresso">
+    <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>Sala.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAEAAAAAUAAAAAABAAgAAQ=</HashCode>
+      <FileName>ModuloIngresso\Ingresso.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ControleDeCinema.Dominio.Sessao">
-    <Position X="3.5" Y="3" Width="1.5" />
+  <Class Name="ControleDeCinema.Dominio.ModuloFilme.Filme">
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Sessao.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAIAAAAAQQAAAAAAAAAgABA=</HashCode>
+      <FileName>ModuloFilme\Filme.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ControleDeCinema.Dominio.Ingresso">
-    <Position X="3.5" Y="0.75" Width="1.5" />
+  <Class Name="ControleDeCinema.Dominio.ModuloSessao.Sessao">
+    <Position X="9.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAABAAAAAQ=</HashCode>
-      <FileName>Ingresso.cs</FileName>
+      <HashCode>AAAACAAIAAAAAAAEAAAAAAAAAAAgAQAAAAAAAAAgAAA=</HashCode>
+      <FileName>ModuloSessao\Sessao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

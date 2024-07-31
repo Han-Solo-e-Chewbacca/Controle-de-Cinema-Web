@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Controle_de_Cinema_Web.Dominio.Compartilhado;
+using ControleDeCinema.Dominio.ModuloFuncionario;
 using ControleDeCinema.Dominio.ModuloSala;
 using ControleDeCinema.Dominio.ModuloSessao;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -18,16 +19,18 @@ namespace ControleDeCinema.Dominio.ModuloIngresso
         public decimal Valor { get; set; }
 
         public Sessao Sessao { get; set; }
+        public Funcionario Funcionario { get; set; }
 
         public Ingresso()
         {
         }
-        public Ingresso(string tipo, string assento, decimal valor,Sessao sessao)
+        public Ingresso(string tipo, string assento, decimal valor,Sessao sessao,Funcionario funcionario)
         {
             Tipo = tipo;
             Assento = assento;
             Valor = valor;
             Sessao = sessao;
+            Funcionario = funcionario;
         }
 
         public override void AtualizarInformacoes(EntidadeBase entidadeAtualizada)
@@ -38,7 +41,7 @@ namespace ControleDeCinema.Dominio.ModuloIngresso
             Assento = ingressoAtualizado.Assento;
             Valor = ingressoAtualizado.Valor;
             Sessao = ingressoAtualizado.Sessao;
-
+            Funcionario = ingressoAtualizado.Funcionario;
         }
 
         public override List<string> Validar()
@@ -53,7 +56,8 @@ namespace ControleDeCinema.Dominio.ModuloIngresso
                 erros.Add("O campo \"Numero\" é obrigatório!");
             if (Valor >= 0)
                 erros.Add("O campo \"Capacidade\" é obrigatório!");
-
+            if (string.IsNullOrEmpty(Funcionario.ToString().Trim()))
+                erros.Add("O campo \"Numero\" é obrigatório!");
             return erros;
         }
 

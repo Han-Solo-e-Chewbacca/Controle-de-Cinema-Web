@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controle de Cinema Web", "Controle de Cinema Web\Controle de Cinema Web.csproj", "{D00F0BDD-9E38-4B59-8A1A-FF195B628FF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleDeCinemaWeb", "Controle de Cinema Web\ControleDeCinemaWeb.csproj", "{D00F0BDD-9E38-4B59-8A1A-FF195B628FF5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentação", "Apresentação", "{F40A9662-8C0B-4190-A616-D9ACEC8EEE3C}"
 EndProject
@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{B063
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrasestrutura", "Infrasestrutura", "{0EF87261-4963-4A5C-82AA-108F0FF05B4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeCinema.Dominio", "ControleDeCinema.Domini\ControleDeCinema.Dominio.csproj", "{6B224083-399F-45B7-B057-7B6D7853BB19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleDeCinema.Dominio", "ControleDeCinema.Domini\ControleDeCinema.Dominio.csproj", "{6B224083-399F-45B7-B057-7B6D7853BB19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeCinema.Infra.Orm", "ControleDeCinema.Infraestrutura\ControleDeCinema.Infra.Orm.csproj", "{DCB29AC0-B1F9-4DDE-A4DA-03F37FA4EDB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleDeCinema.Infra.Orm", "ControleDeCinema.Infraestrutura\ControleDeCinema.Infra.Orm.csproj", "{DCB29AC0-B1F9-4DDE-A4DA-03F37FA4EDB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
