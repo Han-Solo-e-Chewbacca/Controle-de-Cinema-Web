@@ -21,5 +21,7 @@ namespace ControleDeCinema.Infra.Orm.ModuloFilme
         {
             return dbContext.Filmes;
         }
+
+        
     }
 }

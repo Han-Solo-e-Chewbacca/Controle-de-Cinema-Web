@@ -12,6 +12,7 @@ public class InserirFilmeViewModel
    
     [Required(ErrorMessage = "O campo duração é obrigatório!")]
     public string Genero { get; set; }
+    
 }
 
 public class EditarFilmeViewModel

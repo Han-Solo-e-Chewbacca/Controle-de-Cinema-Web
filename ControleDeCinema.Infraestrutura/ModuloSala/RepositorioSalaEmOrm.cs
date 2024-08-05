@@ -20,5 +20,6 @@ namespace ControleDeCinema.Infra.Orm.ModuloSala
         {
             return dbContext.Salas;
         }
+        
     }
 }

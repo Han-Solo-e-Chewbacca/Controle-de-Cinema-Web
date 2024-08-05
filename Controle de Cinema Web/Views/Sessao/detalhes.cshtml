@@ -1,0 +1,26 @@
+﻿@model DetalhesSessaoViewModel
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Visualizar Detalhes da Sessão";
+}
+
+<div class="row mt-3">
+    <div class="col-lg-6 d-grid gap-2 d-md-block">
+
+        <div class="d-grid">
+            <label class="fs-5"><strong>Sessao:</strong> @Model.ToString()</label>
+
+            <label><strong>Id:</strong> [@Model.Id]</label>
+            <label><strong>Sala:</strong> @Model.Sala.ToString()</label>
+            <label><strong>Horário:</strong> @Model.Horario.Date</label>
+            <label><strong>Filme:</strong> @Model.Filme.Titulo</label>
+            <label><strong>Qtd.Ingressos:</strong> @Model.QtdIngressos</label>
+        </div>
+
+        <a href="/sessao/listar" class="btn btn-secondary px-5 mt-4">
+            <i class="bi bi-arrow-return-left me-1"></i>
+            Voltar
+        </a>
+    </div>
+</div>
