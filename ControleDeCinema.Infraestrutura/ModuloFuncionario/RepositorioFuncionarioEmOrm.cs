@@ -6,59 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using ControleDeCinema.Dominio.ModuloFuncionario;
 using ControleDeCinema.Infra.Orm.Compartilhado;
+using ControleDeCinema.Dominio.ModuloSala;
+using Microsoft.EntityFrameworkCore;
+using ControleDeCinema.Dominio.ModuloFilme;
 
 namespace ControleDeCinema.Infra.Orm.ModuloFuncionario
 {
-    public class RepositorioFuncionarioEmOrm : IRepositorioFuncionario
+    public class RepositorioFuncionarioEmOrm : RepositorioBaseEmOrm<Funcionario>, IRepositorioFuncionario
     {
-        ControleDeCinemaDbContext dbContext;
-
-        public RepositorioFuncionarioEmOrm(ControleDeCinemaDbContext dbContext)
+        public RepositorioFuncionarioEmOrm(ControleDeCinemaDbContext dbContext) : base(dbContext)
         {
-            this.dbContext = dbContext;
         }
 
-        public void Inserir(Funcionario registro)
+        protected override DbSet<Funcionario> ObterRegistros()
         {
-            dbContext.Funcionarios.Add(registro);
-
-            dbContext.SaveChanges();
-        }
-
-        public bool Editar(Funcionario registroOriginal, Funcionario registroAtualizado)
-        {
-            if (registroOriginal == null || registroAtualizado == null)
-                return false;
-
-            registroOriginal.AtualizarInformacoes(registroAtualizado);
-
-            dbContext.Funcionarios.Update(registroOriginal);
-
-            dbContext.SaveChanges();
-
-            return true;
-        }
-
-        public bool Excluir(Funcionario registro)
-        {
-            if (registro == null)
-                return false;
-
-            dbContext.Funcionarios.Remove(registro);
-
-            dbContext.SaveChanges();
-
-            return true;
-        }
-
-        public Funcionario SelecionarPorId(int id)
-        {
-            return dbContext.Funcionarios.Find(id)!;
-        }
-
-        public List<Funcionario> SelecionarTodos()
-        {
-            return dbContext.Funcionarios.ToList();
+            return dbContext.Funcionarios;
         }
     }
 }
