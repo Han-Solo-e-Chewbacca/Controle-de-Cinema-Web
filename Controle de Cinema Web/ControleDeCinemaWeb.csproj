@@ -18,4 +18,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ControleDeCinema.Infraestrutura\ControleDeCinema.Infra.Orm.csproj" />
+  </ItemGroup>
+
 </Project>

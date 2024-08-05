@@ -6,59 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using ControleDeCinema.Dominio.ModuloFilme;
 using ControleDeCinema.Infra.Orm.Compartilhado;
+using Microsoft.EntityFrameworkCore;
+using Controle_de_Cinema_Web.Dominio.Compartilhado;
 
 namespace ControleDeCinema.Infra.Orm.ModuloFilme
 {
-    public class RepositorioFilmeEmOrm : IRepositorioFilme
+    public class RepositorioFilmeEmOrm : RepositorioBaseEmOrm<Filme>, IRepositorioFilme
     {
-        ControleDeCinemaDbContext dbContext;
-
-        public RepositorioFilmeEmOrm(ControleDeCinemaDbContext dbContext)
+        public RepositorioFilmeEmOrm(ControleDeCinemaDbContext dbContext) : base(dbContext)
         {
-            this.dbContext = dbContext;
         }
 
-        public void Inserir(Filme registro)
+        protected override DbSet<Filme> ObterRegistros()
         {
-            dbContext.Filmes.Add(registro);
-
-            dbContext.SaveChanges();
-        }
-
-        public bool Editar(Filme registroOriginal, Filme registroAtualizado)
-        {
-            if (registroOriginal == null || registroAtualizado == null)
-                return false;
-
-            registroOriginal.AtualizarInformacoes(registroAtualizado);
-
-            dbContext.Filmes.Update(registroOriginal);
-
-            dbContext.SaveChanges();
-
-            return true;
-        }
-
-        public bool Excluir(Filme registro)
-        {
-            if (registro == null)
-                return false;
-
-            dbContext.Filmes.Remove(registro);
-
-            dbContext.SaveChanges();
-
-            return true;
-        }
-
-        public Filme SelecionarPorId(int id)
-        {
-            return dbContext.Filmes.Find(id)!;
-        }
-
-        public List<Filme> SelecionarTodos()
-        {
-            return dbContext.Filmes.ToList();
+            return dbContext.Filmes;
         }
     }
 }
